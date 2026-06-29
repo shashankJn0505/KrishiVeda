@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>KrishiVeda | Premium Indian Grains, Pulses & Millets</title>
+    <meta name="description" content="Discover India's finest farm-fresh, quality-tested grains, pulses, millets, and seeds. Serving both premium retail consumers and global B2B wholesale enterprises.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandGreen: '#2E7D32',
+                        brandBrown: '#8D6E63',
+                        brandGold: '#F9A825',
+                        brandBg: '#FFFDF7',
+                        brandDark: '#1F2937',
+                        brandLightGray: '#F4F5F7',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brandBg text-brandDark font-sans antialiased overflow-x-hidden selection:bg-brandGreen/20 selection:text-brandGreen">
+
+    <div id="preloader" class="fixed inset-0 z-[100] bg-brandBg flex flex-col items-center justify-center transition-opacity duration-700">
+        <div class="w-16 h-16 border-4 border-brandGreen/20 border-t-brandGreen rounded-full animate-spin mb-4"></div>
+        <span class="font-heading font-medium tracking-widest text-xs uppercase text-brandGreen">KrishiVeda</span>
+    </div>
+
+    <div id="custom-cursor-dot" class="hidden lg:block fixed w-2 h-2 bg-brandGreen rounded-full pointer-events-none z-[9999] -translate-x-1/2 -translate-y-1/2 transition-transform duration-100 ease-out"></div>
+    <div id="custom-cursor-ring" class="hidden lg:block fixed w-10 h-10 border border-brandGreen/40 rounded-full pointer-events-none z-[9998] -translate-x-1/2 -translate-y-1/2 mix-blend-multiply flex items-center justify-center text-[9px] font-heading font-bold uppercase tracking-wider text-brandGreen opacity-0 transition-all duration-300"></div>
+
+    <div class="bg-brandGreen text-white py-2 px-4 text-xs font-medium relative z-50">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1 sm:gap-0 text-center sm:text-left">
+            <div class="flex items-center gap-4 divide-x divide-white/20">
+                <span>✦ 100% Organically Certified Quality Tested</span>
+                <span class="pl-4 hidden md:inline">🚜 Direct From Indian Farms</span>
+            </div>
+            <div class="flex items-center gap-4 text-[11px] opacity-90">
+                <span>Pan India & Global Logistics Delivery</span>
+                <a href="#wholesale" class="underline hover:text-brandGold transition-colors">B2B Bulk Portal</a>
+            </div>
+        </div>
+    </div>
+
+    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 border-b border-transparent bg-brandBg/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-2 z-50">
+                <span class="font-heading font-bold text-2xl tracking-tight text-brandDark">Krishi<span class="text-brandGreen">Veda</span></span>
+            </a>
+
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#" class="font-medium text-sm text-brandGreen nav-link-active relative py-2">Home</a>
+                <div class="relative group py-2">
+                    <a href="#categories" class="font-medium text-sm text-brandDark/80 hover:text-brandGreen transition-colors flex items-center gap-1">Categories 
+                        <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </a>
+                    <div class="absolute top-full left-1/2 -translate-x-1/2 w-[500px] bg-white border border-brandLightGray rounded-2xl p-6 shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2 gap-4 mt-2">
+                        <a href="#products" class="p-3 hover:bg-brandLightGray rounded-xl transition-colors cursor-explore">
+                            <h4 class="font-heading font-semibold text-sm text-brandDark">Premium Grains</h4>
+                            <p class="text-xs text-brandDark/60 mt-0.5">Sharbati Wheat, Lokwan, Long-grain Basmati Rice.</p>
+                        </a>
+                        <a href="#products" class="p-3 hover:bg-brandLightGray rounded-xl transition-colors cursor-explore">
+                            <h4 class="font-heading font-semibold text-sm text-brandDark">Nutritional Pulses</h4>
+                            <p class="text-xs text-brandDark/60 mt-0.5">Toor Dal, Organic Moong, Lentils & Chana.</p>
+                        </a>
+                        <a href="#products" class="p-3 hover:bg-brandLightGray rounded-xl transition-colors cursor-explore">
+                            <h4 class="font-heading font-semibold text-sm text-brandDark">Heritage Millets</h4>
+                            <p class="text-xs text-brandDark/60 mt-0.5">High-fiber Ragi, Jowar, Pearl Bajra.</p>
+                        </a>
+                        <a href="#products" class="p-3 hover:bg-brandLightGray rounded-xl transition-colors cursor-explore">
+                            <h4 class="font-heading font-semibold text-sm text-brandDark">Super Seeds</h4>
+                            <p class="text-xs text-brandDark/60 mt-0.5">Flax, Chia, Mustard & Sesame Seeds.</p>
+                        </a>
+                    </div>
+                </div>
+                <a href="#products" class="font-medium text-sm text-brandDark/80 hover:text-brandGreen transition-colors">Retail Store</a>
+                <a href="#wholesale" class="font-medium text-sm text-brandDark/80 hover:text-brandGreen transition-colors">Wholesale Portal</a>
+                <a href="#quality" class="font-medium text-sm text-brandDark/80 hover:text-brandGreen transition-colors">Quality Standard</a>
+                <a href="#contact" class="font-medium text-sm text-brandDark/80 hover:text-brandGreen transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:flex items-center gap-4">
+                <button class="p-2 text-brandDark/80 hover:text-brandGreen transition-colors relative" aria-label="Search Store">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                </button>
+                <a href="#wholesale" class="btn-magnetic border border-brandGreen/30 text-brandGreen px-5 py-2.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase hover:bg-brandGreen hover:text-white transition-all duration-300">Wholesale RFQ</a>
+                <a href="#products" class="btn-magnetic bg-brandGreen text-white px-5 py-2.5 rounded-xl font-heading font-semibold text-xs tracking-wider uppercase hover:bg-brandDark shadow-md shadow-brandGreen/10 transition-all duration-300">Shop Retail</a>
+            </div>
+
+            <div class="flex items-center gap-3 lg:hidden">
+                <a href="tel:+919999999999" class="p-2 text-brandDark/70 hover:text-brandGreen" aria-label="Call Business">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </a>
+                <button id="mobile-menu-toggle" class="p-2 text-brandDark focus:outline-none z-50 relative min-w-[44px] min-h-[44px]" aria-label="Toggle Global Navigation">
+                    <span id="hamburger-top" class="block w-6 h-0.5 bg-current transition-transform duration-300 mb-1.5"></span>
+                    <span id="hamburger-mid" class="block w-6 h-0.5 bg-current transition-opacity duration-300 mb-1.5"></span>
+                    <span id="hamburger-bot" class="block w-6 h-0.5 bg-current transition-transform duration-300"></span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-overlay" class="fixed inset-0 bg-brandBg z-40 transform translate-x-full transition-transform duration-500 ease-in-out lg:hidden flex flex-col justify-between p-6 pt-28">
+            <nav class="flex flex-col gap-5 text-left">
+                <a href="#" class="mobile-nav-item text-2xl font-heading font-semibold text-brandGreen">Home</a>
+                <a href="#categories" class="mobile-nav-item text-2xl font-heading font-medium text-brandDark/80">Categories</a>
+                <a href="#products" class="mobile-nav-item text-2xl font-heading font-medium text-brandDark/80">Retail Products</a>
+                <a href="#wholesale" class="mobile-nav-item text-2xl font-heading font-medium text-brandDark/80">Wholesale Portal</a>
+                <a href="#quality" class="mobile-nav-item text-2xl font-heading font-medium text-brandDark/80">Quality Control</a>
+                <a href="#contact" class="mobile-nav-item text-2xl font-heading font-medium text-brandDark/80">Contact Us</a>
+            </nav>
+            <div class="flex flex-col gap-3 mt-8">
+                <a href="#products" class="w-full text-center bg-brandGreen text-white py-4 rounded-xl font-heading font-semibold text-sm">Shop Retail Online</a>
+                <a href="#wholesale" class="w-full text-center border border-brandDark/20 text-brandDark py-4 rounded-xl font-heading font-semibold text-sm">Request Wholesale Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative min-h-[calc(100vh-5rem)] flex items-center bg-gradient-to-br from-brandBg via-brandBg to-[#F4EFE6] overflow-hidden px-4 sm:px-6 lg:px-8 py-12">
+            <div id="hero-grain-container" class="absolute inset-0 pointer-events-none opacity-40 z-0"></div>
+            
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+                <div class="lg:col-span-7 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 bg-brandGreen/10 border border-brandGreen/20 px-3 py-1.5 rounded-full text-brandGreen text-xs font-semibold tracking-wider uppercase mb-6" data-aos="fade-down">
+                        <span class="w-1.5 h-1.5 bg-brandGreen rounded-full animate-ping"></span> Global Export Standard Grade
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold tracking-tight text-brandDark leading-[1.1] mb-6" data-aos="fade-up">
+                        Premium Indian <br class="hidden sm:inline">
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brandGreen to-brandBrown">Grains & Pulses</span>
+                    </h1>
+                    <p class="text-base sm:text-lg text-brandDark/70 max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed mb-8" data-aos="fade-up" data-aos-delay="100">
+                        Sourced directly from certified crop fields. Naturally processed, rigorously tested for purity, and packed to preserve absolute baseline nutritional values.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="#products" class="w-full sm:w-auto text-center bg-brandGreen text-white px-8 py-4 rounded-xl font-heading font-semibold text-sm tracking-wide shadow-lg shadow-brandGreen/20 hover:bg-brandDark transition-all transform hover:-translate-y-0.5 cursor-buy">Shop Retail Store</a>
+                        <a href="#wholesale" class="w-full sm:w-auto text-center border-2 border-brandBrown/30 text-brandBrown px-8 py-4 rounded-xl font-heading font-semibold text-sm tracking-wide hover:bg-brandBrown hover:text-white transition-all transform hover:-translate-y-0.5">Bulk Whole Orders</a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center relative" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="absolute -inset-4 bg-brandGold/10 rounded-full filter blur-3xl z-0 max-w-md aspect-square"></div>
+                    <div class="relative w-full max-w-sm sm:max-w-md aspect-[4/5] bg-white border-8 border-white rounded-[2.5rem] shadow-2xl overflow-hidden group cursor-view">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=80" alt="Premium Golden Wheat Crop Harvest" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 lazy-load" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-brandDark/80 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                            <span class="text-brandGold text-sm font-semibold tracking-wider uppercase mb-1">Authentic Sourcing</span>
+                            <h3 class="font-heading font-bold text-xl">Sharbati Gold Plains</h3>
+                            <p class="text-xs text-white/70 mt-1 font-light">Harvested sustainably in Madhya Pradesh.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20 -mt-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white/80 backdrop-blur-md border border-brandLightGray p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between items-start group" data-aos="fade-right">
+                    <div>
+                        <div class="w-12 h-12 bg-brandGreen/10 rounded-2xl flex items-center justify-center text-brandGreen mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-brandDark mb-2">Household Retail Purchase</h2>
+                        <p class="text-brandDark/60 text-sm leading-relaxed mb-6">Order premium household kitchen packages. Packed in oxygen-barrier configurations ranging from 1kg to 10kg with door-delivery logistics.</p>
+                    </div>
+                    <a href="#products" class="inline-flex items-center gap-2 text-brandGreen font-heading font-semibold text-sm group-hover:gap-3 transition-all cursor-buy">Explore Store Store <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+                </div>
+
+                <div class="bg-white/80 backdrop-blur-md border border-brandLightGray p-8 rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between items-start group" data-aos="fade-left">
+                    <div>
+                        <div class="w-12 h-12 bg-brandBrown/10 rounded-2xl flex items-center justify-center text-brandBrown mb-6 group-hover:scale-110 transition-transform">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <h2 class="font-heading font-bold text-2xl text-brandDark mb-2">Commercial Wholesale Portal</h2>
+                        <p class="text-brandDark/60 text-sm leading-relaxed mb-6">Bulk processing raw supplies configured for commercial applications, modern mill complexes, hotels, and exporters. Scaled pricing rules apply.</p>
+                    </div>
+                    <a href="#wholesale" class="inline-flex items-center gap-2 text-brandBrown font-heading font-semibold text-sm group-hover:gap-3 transition-all">Submit Bulk RFQ <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-brandGreen text-xs font-semibold uppercase tracking-widest block mb-2">Premium Selection</span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl text-brandDark tracking-tight">Milled & Sorted Products</h2>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                    <button class="px-4 py-2 text-xs font-heading font-semibold rounded-full bg-brandGreen text-white transition-all shadow-sm">All Products</button>
+                    <button class="px-4 py-2 text-xs font-heading font-semibold rounded-full bg-white border border-brandLightGray text-brandDark/70 hover:bg-brandLightGray transition-all">Grains</button>
+                    <button class="px-4 py-2 text-xs font-heading font-semibold rounded-full bg-white border border-brandLightGray text-brandDark/70 hover:bg-brandLightGray transition-all">Pulses</button>
+                    <button class="px-4 py-2 text-xs font-heading font-semibold rounded-full bg-white border border-brandLightGray text-brandDark/70 hover:bg-brandLightGray transition-all">Millets</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-brandLightGray rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full cursor-buy" data-aos="fade-up">
+                    <div class="relative aspect-square w-full overflow-hidden bg-brandLightGray">
+                        <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=500&q=80" alt="Sharbati Premium Wheat Selection" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105 lazy-load">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold font-heading uppercase tracking-wide text-brandGreen">MP Origin</div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="text-brandGold text-xs">★★★★★</span>
+                                <span class="text-[11px] text-brandDark/45 font-medium">(4.9)</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-brandDark group-hover:text-brandGreen transition-colors mb-1">Premium Sharbati Wheat</h3>
+                            <p class="text-xs text-brandDark/60 line-clamp-2 mb-4 font-light">Direct source high-protein crop seed variant. Yields ultra-soft dietary fibers.</p>
+                        </div>
+                        <div>
+                            <div class="border-t border-brandLightGray pt-3 mb-4">
+                                <span class="text-[10px] text-brandDark/40 font-bold uppercase tracking-wider block mb-1.5">Available Packing Units</span>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">1kg</span>
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">5kg</span>
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">50kg Bulk</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] text-brandDark/40 block">Retail Base Price</span>
+                                    <span class="font-heading font-bold text-lg text-brandDark">₹85<span class="text-xs font-normal text-brandDark/60">/kg</span></span>
+                                </div>
+                                <button class="bg-brandGreen text-white p-2.5 rounded-xl hover:bg-brandDark transition-colors shadow-md shadow-brandGreen/5" aria-label="Add Sharbati Wheat to Request Flow">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-brandLightGray rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full cursor-buy" data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative aspect-square w-full overflow-hidden bg-brandLightGray">
+                        <img src="https://images.unsplash.com/photo-1585996731181-c3f2b02a7b6a?auto=format&fit=crop&w=500&q=80" alt="Organic Toor Dal Pulses" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105 lazy-load">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold font-heading uppercase tracking-wide text-brandGreen">Unpolished</div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="text-brandGold text-xs">★★★★★</span>
+                                <span class="text-[11px] text-brandDark/45 font-medium">(4.8)</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-brandDark group-hover:text-brandGreen transition-colors mb-1">Latur Desi Toor Dal</h3>
+                            <p class="text-xs text-brandDark/60 line-clamp-2 mb-4 font-light">Laser-sorted, unpolished crop seeds. Retains rich inherent proteins.</p>
+                        </div>
+                        <div>
+                            <div class="border-t border-brandLightGray pt-3 mb-4">
+                                <span class="text-[10px] text-brandDark/40 font-bold uppercase tracking-wider block mb-1.5">Available Packing Units</span>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">1kg</span>
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">25kg Bulk</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] text-brandDark/40 block">Retail Base Price</span>
+                                    <span class="font-heading font-bold text-lg text-brandDark">₹160<span class="text-xs font-normal text-brandDark/60">/kg</span></span>
+                                </div>
+                                <button class="bg-brandGreen text-white p-2.5 rounded-xl hover:bg-brandDark transition-colors shadow-md shadow-brandGreen/5" aria-label="Add Toor Dal to Request Flow">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-brandLightGray rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full cursor-buy" data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative aspect-square w-full overflow-hidden bg-brandLightGray">
+                        <img src="https://images.unsplash.com/photo-1590004953392-5aba2e72269a?auto=format&fit=crop&w=500&q=80" alt="Premium Finger Millet Ragi" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105 lazy-load">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold font-heading uppercase tracking-wide text-brandGreen">Gluten Free</div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="text-brandGold text-xs">★★★★★</span>
+                                <span class="text-[11px] text-brandDark/45 font-medium">(5.0)</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-brandDark group-hover:text-brandGreen transition-colors mb-1">Organic Finger Millet (Ragi)</h3>
+                            <p class="text-xs text-brandDark/60 line-clamp-2 mb-4 font-light">Rich in calcium. Sourced from organic farming collectives in Karnataka.</p>
+                        </div>
+                        <div>
+                            <div class="border-t border-brandLightGray pt-3 mb-4">
+                                <span class="text-[10px] text-brandDark/40 font-bold uppercase tracking-wider block mb-1.5">Available Packing Units</span>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">500g</span>
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">5kg</span>
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">50kg Bulk</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] text-brandDark/40 block">Retail Base Price</span>
+                                    <span class="font-heading font-bold text-lg text-brandDark">₹75<span class="text-xs font-normal text-brandDark/60">/kg</span></span>
+                                </div>
+                                <button class="bg-brandGreen text-white p-2.5 rounded-xl hover:bg-brandDark transition-colors shadow-md shadow-brandGreen/5" aria-label="Add Ragi to Request Flow">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-brandLightGray rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group flex flex-col h-full cursor-buy" data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative aspect-square w-full overflow-hidden bg-brandLightGray">
+                        <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=500&q=80" alt="Premium Raw Flax Seeds" class="w-full h-full object-cover transition-transform duration-750 group-hover:scale-105 lazy-load">
+                        <div class="absolute top-3 left-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-md text-[10px] font-bold font-heading uppercase tracking-wide text-brandGreen">Omega-3 Rich</div>
+                    </div>
+                    <div class="p-5 flex flex-col justify-between flex-grow">
+                        <div>
+                            <div class="flex items-center gap-1 mb-2">
+                                <span class="text-brandGold text-xs">★★★★★</span>
+                                <span class="text-[11px] text-brandDark/45 font-medium">(4.7)</span>
+                            </div>
+                            <h3 class="font-heading font-bold text-base text-brandDark group-hover:text-brandGreen transition-colors mb-1">Raw Flax Seeds</h3>
+                            <p class="text-xs text-brandDark/60 line-clamp-2 mb-4 font-light">High dietary fat and fiber configuration. Triple-stage machine cleared.</p>
+                        </div>
+                        <div>
+                            <div class="border-t border-brandLightGray pt-3 mb-4">
+                                <span class="text-[10px] text-brandDark/40 font-bold uppercase tracking-wider block mb-1.5">Available Packing Units</span>
+                                <div class="flex flex-wrap gap-1.5">
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">250g</span>
+                                    <span class="text-[10px] bg-brandLightGray text-brandDark/70 px-2 py-0.5 rounded font-medium">1kg</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <span class="text-[10px] text-brandDark/40 block">Retail Base Price</span>
+                                    <span class="font-heading font-bold text-lg text-brandDark">₹140<span class="text-xs font-normal text-brandDark/60">/kg</span></span>
+                                </div>
+                                <button class="bg-brandGreen text-white p-2.5 rounded-xl hover:bg-brandDark transition-colors shadow-md shadow-brandGreen/5" aria-label="Add Flax Seeds to Request Flow">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="quality" class="py-24 bg-brandDark text-white px-4 sm:px-6 lg:px-8 overflow-hidden relative">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div class="lg:col-span-5" data-aos="fade-right">
+                    <span class="text-brandGold text-xs font-bold tracking-widest uppercase block mb-2">Industrial Grade Purity</span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-4xl tracking-tight mb-6">Advanced Processing Infrastructure</h2>
+                    <p class="text-white/70 text-sm leading-relaxed mb-8 font-light">
+                        Every single seed batches passing operational clearing channels run through a multilinear cleaning sequence, ensuring safety metrics align perfectly with global export directives.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full border border-brandGold text-brandGold flex items-center justify-center text-xs font-bold shrink-0">01</div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm text-white">Buhler Multi-Vision Sorting</h4>
+                                <p class="text-xs text-white/60 mt-0.5">Automated visual sorting algorithms identify and extract foreign organic particulates.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-8 h-8 rounded-full border border-brandGold text-brandGold flex items-center justify-center text-xs font-bold shrink-0">02</div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm text-white">Moisture Stability Metrics</h4>
+                                <p class="text-xs text-white/60 mt-0.5">Silos are maintained at strict atmospheric levels below 12% absolute relative humidity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:col-span-7 relative" data-aos="fade-left">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-800">
+                                <img src="https://images.unsplash.com/photo-1595246140625-573b715d11dc?auto=format&fit=crop&w=400&q=80" alt="Quality Testing Lab" class="w-full h-full object-cover opacity-80 lazy-load">
+                            </div>
+                            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                                <div class="text-3xl font-heading font-bold text-brandGold" id="counter-purity">99.9</div>
+                                <div class="text-xs text-white/60 mt-1 font-medium tracking-wide uppercase">Purity Percentage Certified</div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="bg-white/5 border border-white/10 p-6 rounded-2xl backdrop-blur-sm">
+                                <div class="text-3xl font-heading font-bold text-brandGold" id="counter-capacity">5000</div>
+                                <div class="text-xs text-white/60 mt-1 font-medium tracking-wide uppercase">Metric Tons / Month Cap</div>
+                            </div>
+                            <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-neutral-800">
+                                <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80" alt="Modern Logistics Hub" class="w-full h-full object-cover opacity-80 lazy-load">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="wholesale" class="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+            <div class="bg-gradient-to-br from-brandLightGray to-white border border-brandLightGray rounded-[2.5rem] p-8 sm:p-12 lg:p-16 relative overflow-hidden">
+                <div class="relative z-10 max-w-3xl">
+                    <span class="text-brandGreen text-xs font-bold tracking-widest uppercase block mb-2">Corporate Sourcing Industrial Procurement</span>
+                    <h2 class="font-heading font-bold text-3xl sm:text-5xl text-brandDark tracking-tight mb-6">Establish a Secure Agricultural Supply Chain</h2>
+                    <p class="text-brandDark/70 text-sm sm:text-base leading-relaxed mb-10 font-light">
+                        Request institutional contract quote estimates. Complete our foundational intake diagnostic checklist, and an enterprise trade specialist will connect within 12 standard business hours.
+                    </p>
+                    
+                    <form id="b2b-form" class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                        <div>
+                            <label for="company-name" class="sr-only">Company Entity Name</label>
+                            <input type="text" id="company-name" placeholder="Company Entity Name" required class="w-full px-5 py-4 bg-white border border-brandDark/10 rounded-xl text-sm focus:outline-none focus:border-brandGreen transition-colors">
+                        </div>
+                        <div>
+                            <label for="corporate-email" class="sr-only">Corporate Communication Email</label>
+                            <input type="email" id="corporate-email" placeholder="Corporate Email Address" required class="w-full px-5 py-4 bg-white border border-brandDark/10 rounded-xl text-sm focus:outline-none focus:border-brandGreen transition-colors">
+                        </div>
+                        <div>
+                            <label href="#requirement-volume" class="sr-only">Expected Monthly Volume Tier</label>
+                            <select id="requirement-volume" class="w-full px-5 py-4 bg-white border border-brandDark/10 rounded-xl text-sm focus:outline-none focus:border-brandGreen transition-colors text-brandDark/60">
+                                <option value="">Target Monthly Volume Tier</option>
+                                <option value="lcl">&lt; 10 Metric Tons (LCL)</option>
+                                <option value="fcl">10 - 50 Metric Tons (FCL)</option>
+                                <option value="enterprise">50+ Metric Tons Contract</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="w-full bg-brandGreen text-white font-heading font-semibold text-xs tracking-wider uppercase py-4 rounded-xl shadow-md hover:bg-brandDark transition-all">Initialize RFQ Protocol</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brandDark text-white/90 border-t border-white/5 pt-20 pb-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
+            <div class="lg:col-span-2">
+                <span class="font-heading font-bold text-2xl text-white block mb-4">Krishi<span class="text-brandGreen">Veda</span></span>
+                <p class="text-white/60 text-xs leading-relaxed max-w-sm font-light">
+                    Building verifiable benchmarks across multi-tier agro-commodities distribution infrastructure. Pure origins, standardized processing execution frameworks.
+                </p>
+            </div>
+            <div>
+                <h4 class="font-heading font-semibold text-xs uppercase tracking-wider text-brandGold mb-4">Product Domains</h4>
+                <ul class="space-y-2 text-xs text-white/60 font-light">
+                    <li><a href="#products" class="hover:text-white transition-colors">Premium Sharbati Grain</a></li>
+                    <li><a href="#products" class="hover:text-white transition-colors">Sorted Lentil Varieties</a></li>
+                    <li><a href="#products" class="hover:text-white transition-colors">Indigenous Millets</a></li>
+                    <li><a href="#products" class="hover:text-white transition-colors">Superfoods Oil Seeds</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-semibold text-xs uppercase tracking-wider text-brandGold mb-4">Corporate Pillars</h4>
+                <ul class="space-y-2 text-xs text-white/60 font-light">
+                    <li><a href="#quality" class="hover:text-white transition-colors">Lab Assay Testing Specs</a></li>
+                    <li><a href="#wholesale" class="hover:text-white transition-colors">B2B Logistic Matrix</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Sustainable Sourcing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-heading font-semibold text-xs uppercase tracking-wider text-brandGold mb-4">Enterprise Hub</h4>
+                <p class="text-xs text-white/60 leading-relaxed font-light mb-2">
+                    Corporate HQ:<br>
+                    Jabalpur, Madhya Pradesh, India
+                </p>
+                <a href="mailto:trade@krishiveda.in" class="text-xs text-brandGold underline font-medium">trade@krishiveda.in</a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-white/5 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-center sm:text-left">
+            <p class="text-[11px] text-white/40 font-light">&copy; 2026 KrishiVeda Agriculture Global Industries. All Rights Reserved.</p>
+            <div class="flex gap-6 text-[11px] text-white/40 font-light">
+                <a href="#" class="hover:text-white">Privacy Architecture</a>
+                <a href="#" class="hover:text-white">Terms of Protocol Contract</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919999999999" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 bg-[#25D366] text-white p-3.5 rounded-full shadow-xl hover:scale-110 transition-transform flex items-center justify-center cursor-magnetic" aria-label="Open Direct Channels to WhatsApp Support Escalation Desk">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.6.95 3.488 1.449 5.412 1.451 5.428 0 9.842-4.414 9.845-9.843.002-2.63-1.023-5.101-2.885-6.965C17.155 1.878 14.68 1.854 12.012 1.854 6.585 1.854 2.17 6.269 2.168 11.7c-.001 1.961.512 3.878 1.484 5.508l-.996 3.633 3.725-.976zm11.534-7.391c-.297-.149-1.758-.867-2.03-.966-.273-.099-.472-.148-.671.149-.199.297-.768.966-.941 1.164-.173.199-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.521.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.521-.075-.149-.671-1.62-.919-2.218-.242-.584-.487-.504-.671-.513-.173-.008-.371-.01-.569-.01-.198 0-.521.074-.794.371-.272.297-1.042 1.016-1.042 2.479 0 1.462 1.067 2.877 1.216 3.075.149.198 2.099 3.205 5.084 4.495.71.307 1.264.49 1.696.629.713.227 1.362.195 1.875.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"/></svg>
+    </a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="animations.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
